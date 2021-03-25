@@ -54,14 +54,10 @@ library(VIM)
 library(mice)
 md.pattern(ufo_data)                                                            #using mice library to display the number of missing variables in the UFO data frame
 
-missing_values <- aggr(ufo_data, numbers=TRUE)                                  #Plotting the missing values
-                                                         
-
 #How many records have no missing data content? = 69528
 sum(complete.cases(ufo_data))
 #How many variables have all data variables missing? = 196
 colSums(is.na(ufo_data))
-summary(missing_values)                                                         #summary of missing values
 
 
 #---
