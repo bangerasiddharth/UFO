@@ -61,7 +61,7 @@ sum(complete.cases(ufo_data))
 #Q8|
 #---
 attach(ufo_data)                                                                #attach is used to access used to access the variables present in the data framework without calling the  ufo_data dataframe
-sorted_data <- ufo_data[order(shape, city),]                                    #sorting ufo_data fataframe first by shape and then by city within that shape
+sorted_data <- ufo_data[order(shape, city),]                                    #sorting ufo_data fataframe first by shape and then by city within that shape.
 sorted_ufo_data <- subset(
   sorted_data, select=c("datetime", "city", "country", "shape"))                #extracting columns datetime, city, country, shape and saving it into a new dataframe called sorted_ufo_data
 head(sorted_ufo_data,15)                                                        #displaying the first 15 records of the new sorted_ufo_data dataframe
