@@ -34,7 +34,7 @@ str(ufo_data)                                                                   
 #---
 names(ufo_data)                                                                 #displaying names of variables in ufo_data dataframe
 names(ufo_data)[6] <- "DurationSeconds"                                         #modifying name of var 'duration..seconds.' to 'DurationSeconds'
-names(ufo_data)[7] <- "DurationHrsMins"                                         #modifying name of var 'duration..hours.min.' to 'DurationHrsMins'
+names(ufo_data)[7] <- "DurationHrsMins"                                         #modifying name of var 'duration..hours.min.' to 'DurationHrsMins'.
 names(ufo_data)[9] <- "DatePosted"                                              #modifying name of var 'date.posted.' to 'DatePosted'
 names(ufo_data)                                                                 #displaying names of variables in ufo_data dataframe to ensure the variables have been update as required
 
