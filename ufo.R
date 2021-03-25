@@ -55,7 +55,6 @@ md.pattern(ufo_data)                                                            
 #How many records have no missing data content? = 69528
 sum(complete.cases(ufo_data))
 #How many variables have all data variables missing? = 196
-colSums(is.na(ufo_data))
 
 
 #---
