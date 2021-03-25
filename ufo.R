@@ -49,8 +49,6 @@ class(ufo_data$latitude)                                                        
 #Q7|
 #---
 #install.packages("mice")                                                       #installing mice package
-#install.packages('VIM')
-library(VIM)
 library(mice)
 md.pattern(ufo_data)                                                            #using mice library to display the number of missing variables in the UFO data frame
 
