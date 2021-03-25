@@ -49,13 +49,20 @@ class(ufo_data$latitude)                                                        
 #Q7|
 #---
 #install.packages("mice")                                                       #installing mice package
+#install.packages('VIM')
+library(VIM)
 library(mice)
 md.pattern(ufo_data)                                                            #using mice library to display the number of missing variables in the UFO data frame
 
+missing_values <- aggr(ufo_data, numbers=TRUE)                                  #Plotting the missing values
+                                                         
+
 #How many records have no missing data content? = 69528
 sum(complete.cases(ufo_data))
-#How many variables have all data variables missing?
+#How many variables have all data variables missing? = 196
 colSums(is.na(ufo_data))
+summary(missing_values)                                                         #summary of missing values
+
 
 #---
 #Q8|
@@ -64,7 +71,7 @@ attach(ufo_data)                                                                
 sorted_data <- ufo_data[order(shape, city),]                                    #sorting ufo_data fataframe first by shape and then by city within that shape
 sorted_ufo_data <- subset(
   sorted_data, select=c("datetime", "city", "country", "shape"))                #extracting columns datetime, city, country, shape and saving it into a new dataframe called sorted_ufo_data
-head(sorted_ufo_data,5)                                                         #displaying the first 5 records of the new sorted_ufo_data dataframe
+head(sorted_ufo_data,15)                                                        #displaying the first 15 records of the new sorted_ufo_data dataframe
 
 #---
 #Q9|                                                                            #selecting only those values where country is equal to 'gb' and shape is equal to 'disk'
